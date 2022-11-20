@@ -98,6 +98,7 @@ form {
 
 .IMG_logo{
     margin-right: auto;
+    
 }
 
 .blog_posts{
@@ -154,7 +155,7 @@ form {
 
 .b_cont{
   width: 700px;
-  padding: 10px;
+  padding: 8px 0px 30px 0px;
 }
 
 .post_b{
@@ -163,7 +164,7 @@ form {
   font-size: 16px;
   text-decoration: none;
   background-color: rgb(255, 255, 189);
-  padding: 8px 16px;
+  padding: 10px 16px;
   margin-right: auto;
   border: 1px solid black;
 }
@@ -173,7 +174,7 @@ form {
 
 .post_b:hover{
   background-color: rgb(97, 97, 97);
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 189);
   border: 1px solid black;
 }
 
@@ -272,7 +273,36 @@ form {
 }
 
 @media (max-width: 1220px){
+  .text{
+    font-size: 25px;
+  }
+  .heading{
+    font-size: 35px;
+  }
 
+  .hidden_menu{
+    font-size: 25px;
+  }
+  .header_text{
+    font-size: 65px;
+  }
+  .header_logo{
+    font-size: 45px;
+  }
+  .search button:before {
+    font-size: 16px;
+  }
+  .search input {
+    font-size: 16px;
+  }
+  .b_cont{
+    padding: 15px 0px 30px 0px;
+  }
+  
+  .post_b{
+    font-size: 22px;
+    padding: 12px 18px;
+  }
 }
 
 @media (max-width: 991px){
@@ -293,9 +323,6 @@ form {
     left: 5px;
     width: 25px;
   }
-  .btn_menu span{
-    
-  }
   .hidden_menu_b:checked ~ .btn_menu{
     left: 560px;
   }
@@ -305,9 +332,6 @@ form {
   .header_logo{
     font-size: 50px;
   }
-  .IMG_logo{
-
-}
 form {
   position: relative;
   width: 350px;
@@ -331,20 +355,12 @@ form {
   font-size: 20px;
 }
 .b_cont{
-  width: 700px;
-  padding: 10px;
+  padding: 15px 0px 30px 0px;
 }
 
 .post_b{
-  color: rgb(0, 0, 0);
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-  background-color: rgb(255, 255, 189);
-  padding: 8px 16px;
-  margin-right: auto;
-  border: 1px solid black;
-  height: 70px;
+  font-size: 26px;
+  padding: 15px 20px;
 }
 }
 
@@ -407,6 +423,13 @@ form {
   .search input {
     font-size: 24px;
   }
+  .b_cont{
+    padding: 25px 0px 50px 0px;
+  }
+  .post_b{
+    font-size: 36px;
+    padding: 20px 25px;
+  }
 }
 
 
@@ -452,5 +475,12 @@ form {
   }
   .search input {
     font-size: 28px;
+  }
+  .b_cont{
+    padding: 35px 0px 70px 0px;
+  }
+  .post_b{
+    font-size: 46px;
+    padding: 25px 30px;
   }
 }
