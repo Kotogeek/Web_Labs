@@ -1,5 +1,4 @@
 let isTable = false;
-console.log("HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
 
 function createTable(){
     if(!isTable){
@@ -30,23 +29,34 @@ function addRow(){
     const rowNum = addRowcount();
     const row = table.insertRow()
 
-    row.setAttribute('id', 'num-' === rowNum);
+    row.setAttribute('id', 'num-' + rowNum);
 
     const tdNum =row.insertCell();
     tdNum.textContent = rowNum;
+    tdNum.setAttribute("class", "numberCell");
 
     const tdValue = row.insertCell();
-    tdValue.textContent = 'value';
+    tdValue.textContent = 'value' + ' ' + Math.floor(Math.random()*50);
+}
+
+function autoRepeat(){
+    const cells = document.querySelectorAll('.numberCell');
+    let i = 1;
+    cells.forEach(item=>{
+        item.textContent = i;
+        i++;
+    })
 }
 
 function removeRow(){
     const input = document.getElementById('rowNumber').value;
-    const hiddenInput = document.getElementById('rowCount');
+    let hiddenInput = document.getElementById('rowCount');
     const table = document.getElementById('mytable');
 
     if(parseInt(input) <= parseInt(hiddenInput.value)){
         table.deleteRow(input - 1);
-        //hiddenInput.value -= 1;
+        hiddenInput.value -= 1;
+        autoRepeat();
     }
     else{
         alert('Такой строки нет')
