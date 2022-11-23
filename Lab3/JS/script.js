@@ -39,27 +39,15 @@ function addRow(){
     tdValue.textContent = 'value' + ' ' + Math.floor(Math.random()*50);
 }
 
-function autoRepeat(){
-    const cells = document.querySelectorAll('.numberCell');
-    let i = 1;
-    cells.forEach(item=>{
-        item.textContent = i;
-        i++;
-    })
-}
-
-function removeRow(){
-    const input = document.getElementById('rowNumber').value;
-    let hiddenInput = document.getElementById('rowCount');
-    const table = document.getElementById('mytable');
-
-    if(parseInt(input) <= parseInt(hiddenInput.value)){
-        table.deleteRow(input - 1);
-        hiddenInput.value -= 1;
-        autoRepeat();
+function removeRow()
+{
+    const input = document.getElementById('rowNumber').value
+    if (document.getElementById('num-' + input) != null)
+    {
+        document.getElementById('num-' + input).remove();
+    } 
+    else
+    {
+        alert('Такой строки не существует')
     }
-    else{
-        alert('Такой строки нет')
-    }
-
 }
