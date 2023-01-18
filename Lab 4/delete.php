@@ -1,8 +1,6 @@
-<?php 
-    // 
+<?php  
     if (isset($_GET['id'])) {
 
-        // id из запроса
         $id = $_GET['id'];
 
         $xml = simplexml_load_file("data.xml");
