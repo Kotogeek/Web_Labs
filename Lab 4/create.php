@@ -12,13 +12,11 @@
         
         $lastEl = $xml->post[$xml->count() - 1];
 
-        // создаем тег корневой book 
         $newpost = $xml->addChild('post', '');
         $newpost->addChild('name', $name);
         $newpost->addChild('description', $description);
         $newpost->addChild('img', $img);
 
-        // добавляем атрибут id на один больше чем у последнего
         $newpost->addAttribute('id', $lastEl['id'] + 1);
 
         $xml->saveXML("data.xml");
